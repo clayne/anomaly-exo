@@ -101,7 +101,7 @@ function blast()
     h.type = hit.shock
     h.draftsman = db.actor
     h.power = 1.5
-    h.bone = "bip01_spine"
+    h:bone("bip01_spine")
     level.add_pp_effector("blink.ppe", 6969, false)
     level.set_pp_effector_factor(6969, 0.1)
     blast_sounds[2]:play(db.actor, 0, sound_object.s2d)
@@ -272,7 +272,7 @@ local function ram()
         h.type = hit.strike
         h.draftsman = actor
         h.power = is_rhino and 1 or 0.6
-        h.bone = "bip01_spine"
+        h:bone("bip01_spine")
         level.add_cam_effector("camera_effects\\hit_front.anm", 5923, false, "")
         level.add_pp_effector("bloody.ppe", 9230, false)
         level.set_pp_effector_factor(9230, 0.2)
